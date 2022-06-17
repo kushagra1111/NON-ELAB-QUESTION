@@ -1,0 +1,48 @@
+#include<stdio.h>
+struct lib{
+    int no_of_books;
+    int no_of_magazines;
+    int no_of_journals;
+    int no_of_ebooks;}E1;
+
+int main(){
+    int E2,min;
+    printf("Number of books: \n");
+    scanf("%d",&E1.no_of_books);
+    printf("Number of magazines: \n");
+    scanf("%d",&E1.no_of_magazines);
+    printf("Number of journals: \n");
+    scanf("%d",&E1.no_of_journals);
+    printf("Number of ebooks: \n");
+    scanf("%d",&E1.no_of_ebooks);
+    printf("The max number of books \n");
+    E2 = E1.no_of_ebooks + E1.no_of_journals + E1.no_of_magazines + E1.no_of_books;
+    printf("%d ",E2 );
+    if(E1.no_of_books<E1.no_of_journals&&E1.no_of_books<E1.no_of_magazines&&E1.no_of_books<E1.no_of_ebooks){
+        min=E1.no_of_books;
+        printf("\nThe minimum numbers of book is :%d",E1.no_of_books);
+        }
+    else if(E1.no_of_magazines<E1.no_of_books&&E1.no_of_magazines<E1.no_of_journals&&E1.no_of_journals<E1.no_of_ebooks){
+        min=E1.no_of_magazines;
+        printf("\nThe minimum numbers of book is :%d",E1.no_of_magazines);
+    }
+    else if(E1.no_of_journals<E1.no_of_books&&E1.no_of_journals<E1.no_of_magazines&&E1.no_of_journals<E1.no_of_ebooks){
+        min=E1.no_of_journals;
+        printf("\nThe minimum numbers of book is :%d",E1.no_of_journals);
+    }
+    else {
+        min=E1.no_of_ebooks;
+        printf("\n The minimum numbers of book is : %d",E1.no_of_ebooks);
+    }
+    //DISPLAY
+    printf("\n\nNumber of ebooks %d\n",E1.no_of_ebooks);
+
+    printf("\nNumber of magazines %d\n",E1.no_of_magazines);
+
+    printf("\nNumber of books %d\n",E1.no_of_books);
+
+    printf("\nNumber of journals %d\n",E1.no_of_journals);
+
+
+    return 0;
+}
